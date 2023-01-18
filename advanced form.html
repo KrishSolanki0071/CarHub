@@ -1,0 +1,116 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <header class="site-header">
+    <div class="site-identity">
+        <h1><a href="#">The Car Hub</a></h1>
+    </div>
+    <nav class="site-navigation">
+        <ul class="nav">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="evcars.html">EV Cars</a></li>
+            <li><a href="leluxe.html">Luxury Cars</a></li>
+            <li><a href="supercar.html">Super Cars</a></li>
+            <li><a href="advanced form.html">Contact us</a></li>
+        </ul>
+    </nav>
+</header>
+  
+      <div class="front">
+        <!--<img src="images/frontImg.jpg" alt="">-->
+        
+      </div>
+      <div class="back">
+        <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+        
+      </div>
+  
+    
+        
+   
+    <div>
+        <div >Registration</div>
+            <form method = "post"autocomplete="off" name = "google-sheet">
+              <div>
+                  <div>
+                    <span class="details">First Name</span>
+                      <input type ="text" autocomplete = "off" placeholder = "First Name" autofocus First name = "First Name" required>
+                  </div>
+
+
+                  <div>
+                    <span class="details">Last Name</span>
+                      <input type ="text" autocomplete = "off" placeholder = "Last Name" required>
+                  </div>
+
+
+                  <div>
+                    <span class="details">E-Mail</span>
+                      <input type ="email" autocomplete = "off" placeholder = "E-mail" required>
+                  </div>
+
+                  <div>
+                    <span class="details">Phone Number</span>
+                      <input type ="number" autocomplete = "off" placeholder = "Phone Number" required>
+                  </div>
+                  
+                  <p >Select a Car from the list.</p>
+
+                  <select id="mySelect" onchange="myFunction()">
+                      <option value="Audi E Tron GT">Audi E Tron GT</option>
+                      <option value="Porsche Taycan Turbo S">Porsche Taycan Turbo S</option>
+                      <option value="Tesla Model S">Tesla Model S</option>
+                      <option value="Mercedes AMG EQS">Mercedes AMG EQS</option>
+                      <option value="Mini Cooper Convertible">Mini Cooper Convertible</option>
+                      <option value="BMW 3 Series 320d Luxury Line">BMW 3 Series 320d Luxury Line</option>
+                      <option value="Porsche Taycan">Porsche Taycan</option>
+                      <option value="Rolls Royce Dawn">Rolls Royce Dawn</option>
+                      <option value="Ferrari 296gtb">>Ferrari 296gtb</option>
+                      <option value="Ferrari Enzo">Ferrari Enzo</option>
+                      <option value="Bugatti Veyron Super Sport">Bugatti Veyron Super Sport</option>
+                      <option value="Ferrari LaFerrari">Ferrari LaFerrari</option>
+                      <option value="Bugatti Chiron">Buggati chiron</option>
+                    </select>
+
+
+        
+
+              
+              </div>
+
+            <div class="button">
+                <input type="submit" value = "Register"/>
+            </div>
+        </form>
+
+        <p id="game"></p>
+
+        <script>
+          function myFunction() {
+         var x = document.getElementById("mySelect").value;
+        document.getElementById("game").innerHTML = "You selected: " + x;
+        }
+         </script>
+         
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxkgWotCMyvIKoT9aGtPCndZdHtHrq8i972t9CKAVjO6xC7T0I/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+         </script>
+     </div>
+    
+</body>
+</html>

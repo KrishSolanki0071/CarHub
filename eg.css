@@ -1,0 +1,79 @@
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-20deg, #F5B041 50%, orange 50%, #138D75 50%);
+    bottom:0;
+    left:-100%;
+    opacity:.5;
+    position:fixed;
+    right:-75%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  
+  
+  h1 {
+    font-family:monospace;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+  
+  
+  .main_head
+  {
+    
+    text-align: center;
+  }
+  
+  .cars
+  {
+    color:#F4F6F7;
+    /*font-family: 'Ms Madi', cursive;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Krona One', sans-serif;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Lexend Zetta', sans-serif;*/
+    font-family: 'Play', sans-serif;
+  
+    font-size: 30px;
+  }
+  
+  .headings
+  {
+    color:#4A235A;
+    font-family:'Krona One', sans-serif;
+    
+  }
+  
+  
+  .text
+  {
+    color:red;
+    font-family: 'Share Tech Mono', monospace;
+  
+  }
+  
