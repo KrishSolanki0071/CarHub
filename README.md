@@ -1,0 +1,1 @@
+An interactive website presented as the final project under a full stack development course offered by IBM by the name of "Carhub" with detailed descriptions of several car categories for confused buyers.
